@@ -126,6 +126,25 @@ then
 		echo " "
 	fi
 
+	elif [ $opt1 == 6 ]
+then
+	echo "Delete existing files here.. "
+	echo "Enter name of File you want to Delete!"
+	echo "Note: Please Enter full Name with Extension."
+	read delfile
+	echo "-------------------------------OutPut------------------------------------"
+
+
+	if [ -f "$delfile" ];
+	then
+		rm $delfile
+		echo "Successfully Deleted."
+		echo " "
+	else
+		echo "File Does not Exist..Try again"
+		echo " "
+	fi
+
 elif [ $opt1 == 0 ]
 then
 	echo "Good Bye.."
