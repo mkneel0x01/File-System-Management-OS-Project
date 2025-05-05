@@ -109,6 +109,23 @@ then
 		echo "$edit File does not exist..Try again."
 	fi
 
+	elif [ $opt1 == 5 ]
+then
+	echo "Search files here.."
+	echo "Enter File Name with Extension to search"
+	read f
+	echo "-------------------------------OutPut------------------------------------"
+	if [ -f "$f" ];
+	then
+		echo "Searching for $f File"
+		echo "File Found."
+		find /home -name $f
+		echo " "
+	else
+		echo "File Does not Exist..Try again."
+		echo " "
+	fi
+
 elif [ $opt1 == 0 ]
 then
 	echo "Good Bye.."
