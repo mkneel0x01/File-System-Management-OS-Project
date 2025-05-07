@@ -14,6 +14,7 @@ do
     echo "6-Remove Existing Files"
     echo "7-Details of Files"
 	echo "8-View content of file here.."
+	echo "9-Sort files content here.."
     echo "0-Exit"
     echo " "
 read opt1
@@ -179,6 +180,22 @@ then
 
 	else
 		echo "$readfile doesn't exit"
+	fi
+echo " "
+
+elif [ $opt1 == 9 ]
+then
+	echo "Sort files content here.."
+	echo "Enter file name with extension.."
+	read sortfile
+	echo "-----------output---------"
+	if [ -f "$sortfile" ];
+	then 
+		echo "Sorting file content."
+		sleep 3
+		sort $sortfile
+	else 
+		echo "$sortfile file doesn't exit..Try again.."
 	fi
 echo " "
 
