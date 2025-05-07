@@ -13,6 +13,7 @@ do
     echo "5-Search Files"
     echo "6-Remove Existing Files"
     echo "7-Details of Files"
+	echo "8-View content of file here.."
     echo "0-Exit"
     echo " "
 read opt1
@@ -66,7 +67,7 @@ then
 	echo " "
 	fi
 
-	elif [ $opt1 == 3 ]
+elif [ $opt1 == 3 ]
 then
 
 	echo "-------------------------------OutPut------------------------------------"
@@ -109,7 +110,7 @@ then
 		echo "$edit File does not exist..Try again."
 	fi
 
-	elif [ $opt1 == 5 ]
+elif [ $opt1 == 5 ]
 then
 	echo "Search files here.."
 	echo "Enter File Name with Extension to search"
@@ -126,7 +127,7 @@ then
 		echo " "
 	fi
 
-	elif [ $opt1 == 6 ]
+elif [ $opt1 == 6 ]
 then
 	echo "Delete existing files here.. "
 	echo "Enter name of File you want to Delete!"
@@ -163,6 +164,22 @@ then
 		echo "$detail file not exit..Try again.."
 	fi
 
+echo " "
+elif [ $opt1 == 8 ]
+then
+	echo "View content of file here.."
+	echo "Enter file name : "
+	read readfile
+	echo "---------------output-----------"
+	if [ -f "$readfile" ];
+	then 
+		echo "Showing file content.."
+		sleep 3
+		cat $readfile
+
+	else
+		echo "$readfile doesn't exit"
+	fi
 echo " "
 
 elif [ $opt1 == 0 ]
