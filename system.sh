@@ -15,6 +15,7 @@ do
     echo "7-Details of Files"
 	echo "8-View content of file here.."
 	echo "9-Sort files content here.."
+	echo "10-List of all directories.."
     echo "0-Exit"
     echo " "
 read opt1
@@ -91,7 +92,6 @@ then
 		echo "$old does not exist..Try again with correct filename."
 	fi
 echo " "
-
 elif [ $opt1 == 4 ]
 then
 	echo "Edit file content here.."
@@ -120,6 +120,7 @@ then
 	if [ -f "$f" ];
 	then
 		echo "Searching for $f File"
+		sleep 4
 		echo "File Found."
 		find /home -name $f
 		echo " "
@@ -182,7 +183,6 @@ then
 		echo "$readfile doesn't exit"
 	fi
 echo " "
-
 elif [ $opt1 == 9 ]
 then
 	echo "Sort files content here.."
@@ -197,6 +197,15 @@ then
 	else 
 		echo "$sortfile file doesn't exit..Try again.."
 	fi
+echo " "
+elif  [ $opt1 == 10 ]
+then
+	echo "----------output---------"
+	echo "List of all directories.."
+	echo "Showing all directories.."
+	echo "Loading.."
+	sleep 4
+	ls -d */
 echo " "
 
 elif [ $opt1 == 0 ]
