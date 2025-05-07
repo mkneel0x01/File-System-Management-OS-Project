@@ -145,6 +145,26 @@ then
 		echo " "
 	fi
 
+elif [ $opt1 == 7 ]
+then 
+	echo "Details of files.."
+	echo "Enter file name with extension.."
+	read detail
+	echo "--------output-------"
+	echo "Checking for file"
+	sleep 3
+
+	if [ -f "$detail" ];
+	then 
+		echo "Loading Properties.."
+		stat $detail
+
+	else 
+		echo "$detail file not exit..Try again.."
+	fi
+
+echo " "
+
 elif [ $opt1 == 0 ]
 then
 	echo "Good Bye.."
