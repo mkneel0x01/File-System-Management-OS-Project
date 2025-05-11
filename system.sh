@@ -17,6 +17,7 @@ do
 	echo "9-Sort files content here.."
 	echo "10-List of all directories.."
 	echo "11- List Files of Particular Extension"
+	echo "12- Count Number of Directories"
     echo "0-Exit"
     echo " "
 read opt1
@@ -242,7 +243,17 @@ then
 	echo "Invalid Input..Try again.."
 	fi
 echo " "
-
+elif [ $opt1 == 12 ]
+then
+	echo "-------OutPut--------"
+	echo "Total number of Directories here.."
+	echo "Loading all directories.."
+	sleep 3
+	echo "Counting.."
+	sleep 3
+	echo "Number of Directories are : "
+	echo */ | wc -w
+echo " "
 elif [ $opt1 == 0 ]
 then
 	echo "Good Bye.."
