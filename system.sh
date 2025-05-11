@@ -16,6 +16,7 @@ do
 	echo "8-View content of file here.."
 	echo "9-Sort files content here.."
 	echo "10-List of all directories.."
+	echo "11- List Files of Particular Extension"
     echo "0-Exit"
     echo " "
 read opt1
@@ -206,6 +207,40 @@ then
 	echo "Loading.."
 	sleep 4
 	ls -d */
+echo " "
+elif [ $opt1 == 11 ]
+then
+
+	echo "List of Files with Particular extensions here.."
+	echo "Which type of file list you want to see?"
+	echo "1- .c"
+	echo "2- .sh"echo "3- .txt"
+	echo "Enter your choice from 1-3"
+	read extopt
+	echo "----------OutPut-----------"
+	if [ $extopt == 1 ]
+	then
+	echo "List of .c Files shown below."
+	echo "Loading.."
+	sleep 3
+	ls *.c
+
+	elif [ $extopt == 2 ]
+	then
+	echo "List of .sh Files shown below."
+	echo "Loading.."
+	sleep 3
+	ls *.sh
+	elif [ $extopt == 3 ]
+	then
+	echo "List of .txt Files shown below."
+	echo "Loading.."
+	sleep 3
+	ls *.txt
+
+	else
+	echo "Invalid Input..Try again.."
+	fi
 echo " "
 
 elif [ $opt1 == 0 ]
