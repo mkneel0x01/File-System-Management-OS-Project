@@ -18,9 +18,11 @@ do
 	echo "10-List of all directories.."
 	echo "11- List Files of Particular Extension"
 	echo "12- Count Number of Directories"
+	echo "13- Count Number of Files"
     echo "0-Exit"
     echo " "
 read opt1
+
 if [ $opt1 == 1 ]
 then 
     echo "List all files & Directories.."
@@ -253,6 +255,15 @@ then
 	sleep 3
 	echo "Number of Directories are : "
 	echo */ | wc -w
+echo " "
+elif [ $opt1 == 13 ]
+then
+	echo "------------------OutPut------------------------"
+	echo "Total Numbers of Files in Current Directory here.."
+	echo "Loading all files.."
+	sleep 3
+	echo "Number of Files are : "
+	ls -l | grep -v 'total' | grep -v '^d' | wc -l
 echo " "
 elif [ $opt1 == 0 ]
 then
