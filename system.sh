@@ -48,7 +48,7 @@ then
 	echo "Enter File Name without .c Extension"
 	read filename
 	touch $filename.c
-	echo "-------------------------------OutPut------------------------------------"
+	echo "---------------OutPut-----------------------"
 	echo "File Created Successfully"
 	echo " "
 
@@ -57,7 +57,7 @@ then
 	echo "Enter File Name without .sh Extension"
 	read filename2
 	touch $filename2.sh
-	echo "-------------------------------OutPut------------------------------------"
+	echo "--------------OutPut-------------------"
 	echo "File Created Successfully"
 	echo " "
 
@@ -66,7 +66,7 @@ then
 	echo "Enter File Name without .txt Extension"
 	read filename3
 	touch $filename3.txt
-	echo "-------------------------------OutPut------------------------------------"
+	echo "---------------OutPut--------------------"
 	echo "File Created Successfully"
 	echo " "
 	else
@@ -77,7 +77,7 @@ then
 elif [ $opt1 == 3 ]
 then
 
-	echo "-------------------------------OutPut------------------------------------"
+	echo "-------------OutPut--------------------"
 	echo "Rename files here.."
 	echo "Enter Old Name of File with Extension.."
 	read old
@@ -102,7 +102,7 @@ then
 	echo "Edit file content here.."
 	echo "Enter File Name with Extension : "
 	read edit
-	echo "-------------------------------OutPut------------------------------------"
+	echo "---------OutPut-----------"
 	echo "Checking for file.."
 	sleep 3
 
@@ -121,7 +121,7 @@ then
 	echo "Search files here.."
 	echo "Enter File Name with Extension to search"
 	read f
-	echo "-------------------------------OutPut------------------------------------"
+	echo "----------------OutPut-----------------"
 	if [ -f "$f" ];
 	then
 		echo "Searching for $f File"
@@ -140,7 +140,7 @@ then
 	echo "Enter name of File you want to Delete!"
 	echo "Note: Please Enter full Name with Extension."
 	read delfile
-	echo "-------------------------------OutPut------------------------------------"
+	echo "-------------OutPut-----------------"
 
 
 	if [ -f "$delfile" ];
@@ -166,12 +166,12 @@ then
 	then 
 		echo "Loading Properties.."
 		stat $detail
-
 	else 
 		echo "$detail file not exit..Try again.."
 	fi
 
 echo " "
+
 elif [ $opt1 == 8 ]
 then
 	echo "View content of file here.."
@@ -183,7 +183,6 @@ then
 		echo "Showing file content.."
 		sleep 3
 		cat $readfile
-
 	else
 		echo "$readfile doesn't exit"
 	fi
@@ -218,7 +217,8 @@ then
 	echo "List of Files with Particular extensions here.."
 	echo "Which type of file list you want to see?"
 	echo "1- .c"
-	echo "2- .sh"echo "3- .txt"
+	echo "2- .sh"
+	echo "3- .txt"
 	echo "Enter your choice from 1-3"
 	read extopt
 	echo "----------OutPut-----------"
@@ -268,13 +268,14 @@ then
 echo " "
 elif [ $opt1 == 14 ]
 then
-	echo "---------------------OutPut---------------------------"
+	echo "---------------OutPut-------------------"
 	echo "Sort Files here.."
 	echo "Your Request of Sorting file is Generated."
 	echo "Sorting...."
 	sleep 3
 	ls | sort
 echo " "
+
 elif [ $opt1 == 0 ]
 then
 	echo "Good Bye.."
